@@ -1,0 +1,15 @@
+#include "Keypad.h"
+#include "uart.h"
+#include "gpio.h"
+#include "std_types.h"
+
+int main ()
+{
+	uint8 key;
+	UART_init(9600);
+	while(1)
+	{
+		key=KEYPAD_getPressedKey();
+		UART_sendByte(key);
+	}
+}

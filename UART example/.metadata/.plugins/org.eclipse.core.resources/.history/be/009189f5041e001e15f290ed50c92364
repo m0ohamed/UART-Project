@@ -1,0 +1,40 @@
+#include "uart.h"
+#include "MY_GPIO.h"
+#include "std_types.h"
+#include "DC_motor.h"
+#include "LCD.h"
+#include "PWM.h"
+int main()
+{
+	uint8 num;
+	UART_INIT INIT_OBJ={async,Disabled,_1_Stop_Bit,_8_Bit_Mode,Double_speed,9600};
+	LCD_init();
+	DcMotor_Init();
+	UART_init(&INIT_OBJ);
+
+	while(1)
+	{
+		num=UART_recieveByte();
+		if(num==1)
+		{
+
+			DcMotor_Rotate(OFF,0);
+			LCD_displayStringRowColumn(0,11,"OFF ");
+			LCD_moveCursor(1,10);
+		}
+		if(num==2)
+		{
+			DcMotor_Rotate(CW,64);
+			LCD_displayStringRowColumn(0,11,"ON   ");
+			LCD_moveCursor(1,10);
+
+		}
+		if(num==3)
+		{
+			DcMotor_Rotate(CW,255);
+			LCD_displayStringRowColumn(0,11,"ON   ");
+			LCD_moveCursor(1,10);
+		}
+	}
+
+}

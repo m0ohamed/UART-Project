@@ -1,0 +1,39 @@
+#include "uart.h"
+#include "gpio.h"
+#include "std_types.h"
+
+int main()
+{
+	uint8 num;
+	UART_INIT INIT_OBJ={async,Disabled,_1_Stop_Bit,_8_Bit_Mode,Double_speed,9600};
+	GPIO_setupPinDirection(PORTC_ID,PIN0_ID,PIN_OUTPUT);
+	GPIO_setupPinDirection(PORTC_ID,PIN1_ID,PIN_OUTPUT);
+	GPIO_setupPinDirection(PORTC_ID,PIN2_ID,PIN_OUTPUT);
+	UART_init(&INIT_OBJ);
+	while(1)
+	{
+		num=UART_recieveByte();
+		if(num==1)
+		{
+			GPIO_writePin(PORTC_ID,PIN0_ID,LOGIC_HIGH);
+			GPIO_writePin(PORTC_ID,PIN1_ID,LOGIC_LOW);
+			GPIO_writePin(PORTC_ID,PIN2_ID,LOGIC_LOW);
+
+		}
+		if(num==2)
+				{
+					GPIO_writePin(PORTC_ID,PIN1_ID,LOGIC_HIGH);
+					GPIO_writePin(PORTC_ID,PIN0_ID,LOGIC_LOW);
+					GPIO_writePin(PORTC_ID,PIN2_ID,LOGIC_LOW);
+
+				}
+		if(num==3)
+				{
+					GPIO_writePin(PORTC_ID,PIN2_ID,LOGIC_HIGH);
+					GPIO_writePin(PORTC_ID,PIN1_ID,LOGIC_LOW);
+					GPIO_writePin(PORTC_ID,PIN0_ID,LOGIC_LOW);
+
+				}
+	}
+
+}

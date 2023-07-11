@@ -1,0 +1,1665 @@
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+../DC_motor.c: In function 'DcMotor_Init':
+../DC_motor.c:5: error: 'OUTPUT_PIN' undeclared (first use in this function)
+../DC_motor.c:5: error: (Each undeclared identifier is reported only once
+../DC_motor.c:5: error: for each function it appears in.)
+make: *** [DC_motor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+Finished building: ../DC_motor.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+Finished building: ../Ledsc.c
+ 
+Building file: ../My_GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"My_GPIO.d" -MT"My_GPIO.o" -c -o "My_GPIO.o" "../My_GPIO.c"
+Finished building: ../My_GPIO.c
+ 
+Building file: ../PWM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PWM.d" -MT"PWM.o" -c -o "PWM.o" "../PWM.c"
+Finished building: ../PWM.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7592 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7592 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7592 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7592 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7578 bytes (23.1% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7810 bytes (23.8% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7582 bytes (23.1% Full)
+(.text + .data + .bootloader)
+
+Data:         28 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7616 bytes (23.2% Full)
+(.text + .data + .bootloader)
+
+Data:         42 bytes (2.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Ledsc.c: In function 'main':
+../Ledsc.c:73: warning: implicit declaration of function '_delay_num'
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+./Ledsc.o: In function `main':
+../Ledsc.c:73: undefined reference to `_delay_num'
+make: *** [micro2.elf] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8148 bytes (24.9% Full)
+(.text + .data + .bootloader)
+
+Data:         80 bytes (3.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Ledsc.c: In function 'main':
+../Ledsc.c:70: error: expected '(' before '{' token
+make: *** [Ledsc.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7864 bytes (24.0% Full)
+(.text + .data + .bootloader)
+
+Data:         72 bytes (3.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8244 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8244 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8248 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8254 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8254 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8270 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8268 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8268 bytes (25.2% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8274 bytes (25.3% Full)
+(.text + .data + .bootloader)
+
+Data:         86 bytes (4.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Ledsc.c: In function 'main':
+../Ledsc.c:10: warning: unused variable 'coun'
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7958 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         76 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7956 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         76 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7956 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         76 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7956 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         76 bytes (3.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7964 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         84 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7964 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         84 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7964 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         84 bytes (4.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7972 bytes (24.3% Full)
+(.text + .data + .bootloader)
+
+Data:         92 bytes (4.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    7986 bytes (24.4% Full)
+(.text + .data + .bootloader)
+
+Data:        106 bytes (5.2% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+??:??:?? **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8002 bytes (24.4% Full)
+(.text + .data + .bootloader)
+
+Data:        122 bytes (6.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:54:04 **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+make: *** [gpio.o] Error -1073741502
+"make all" terminated with exit code 2. Build might be incomplete.
+18:54:40 **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+make: *** [DC_motor.o] Error -1073741502
+"make all" terminated with exit code 2. Build might be incomplete.
+18:57:26 **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+make: *** [gpio.o] Error -1073741502
+"make all" terminated with exit code 2. Build might be incomplete.
+18:57:31 **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+make: *** [DC_motor.o] Error -1073741502
+"make all" terminated with exit code 2. Build might be incomplete.
+19:07:46 **** Incremental Build of configuration Debug for project micro1 ****
+make all 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../kaypadc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"kaypadc.d" -MT"kaypadc.o" -c -o "kaypadc.o" "../kaypadc.c"
+Finished building: ../kaypadc.c
+ 
+Building file: ../keypad.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"keypad.d" -MT"keypad.o" -c -o "keypad.o" "../keypad.c"
+In file included from ../keypad.c:14:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../keypad.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: micro1.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro1.map -mmcu=atmega32 -o "micro1.elf"  ./gpio.o ./kaypadc.o ./keypad.o ./uart.o   
+Finished building target: micro1.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro1.elf  >"micro1.lss"
+Finished building: micro1.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro1.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    6258 bytes (19.1% Full)
+(.text + .data + .bootloader)
+
+Data:         18 bytes (0.9% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+19:07:50 **** Incremental Build of configuration Debug for project micro2 ****
+make all 
+Building file: ../DC_motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"DC_motor.d" -MT"DC_motor.o" -c -o "DC_motor.o" "../DC_motor.c"
+Finished building: ../DC_motor.c
+ 
+Building file: ../LCD.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"LCD.d" -MT"LCD.o" -c -o "LCD.o" "../LCD.c"
+In file included from ../LCD.c:4:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../LCD.c
+ 
+Building file: ../Ledsc.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"Ledsc.d" -MT"Ledsc.o" -c -o "Ledsc.o" "../Ledsc.c"
+In file included from ../Ledsc.c:7:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../Ledsc.c
+ 
+Building file: ../My_GPIO.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"My_GPIO.d" -MT"My_GPIO.o" -c -o "My_GPIO.o" "../My_GPIO.c"
+Finished building: ../My_GPIO.c
+ 
+Building file: ../PWM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"PWM.d" -MT"PWM.o" -c -o "PWM.o" "../PWM.c"
+Finished building: ../PWM.c
+ 
+Building file: ../uart.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=16000000UL -MMD -MP -MF"uart.d" -MT"uart.o" -c -o "uart.o" "../uart.c"
+Finished building: ../uart.c
+ 
+Building target: micro2.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,micro2.map -mmcu=atmega32 -o "micro2.elf"  ./DC_motor.o ./LCD.o ./Ledsc.o ./My_GPIO.o ./PWM.o ./uart.o   
+Finished building target: micro2.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S micro2.elf  >"micro2.lss"
+Finished building: micro2.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 micro2.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    8002 bytes (24.4% Full)
+(.text + .data + .bootloader)
+
+Data:        122 bytes (6.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

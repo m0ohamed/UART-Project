@@ -1,0 +1,91 @@
+ /******************************************************************************
+ *
+ * Module: UART
+ *
+ * File Name: uart.h
+ *
+ * Description: Header file for the UART AVR driver
+ *
+ * Author: Mohamed Khaled
+ *
+ *******************************************************************************/
+
+#ifndef UART_H_
+#define UART_H_
+
+#include "std_types.h"
+
+/*******************************************************************************
+ *                      Functions Prototypes                                   *
+ *******************************************************************************/
+//for the asynchronous mode UMSEL=0 ,for synchronous=1
+typedef enum
+{
+	async,sync
+}ModeSelect;
+//Disable or Enable(Even-Odd) Parity Bit
+typedef enum
+{
+	Disabled,Even_Parity=2,Odd_Parity
+}ParityMode;
+
+//choose 1 or 2 Stop Bits
+typedef enum
+{
+	_1_Stop_Bit,_2_Stop_Bits
+}Stop_Bit_Select;
+
+//character size 5,6,7,8 or 9
+typedef enum
+{
+	_5_Bit_Mode,_6_Bit_Mode,_7_Bit_Mode,_8_Bit_Mode,_9_Bit_Mode=7
+}CHaracterSize;
+
+typedef enum
+{
+	Default_Speed,Double_speed
+}Douply_Speed;
+
+typedef struct
+{
+	ModeSelect Mode;
+	ParityMode Parity;
+	Stop_Bit_Select Stop_Bit;
+	CHaracterSize Data_Mode;
+	Douply_Speed Speed_state;
+	uint32 BaudeRate;
+}UART_INIT;
+/*
+ * Description :
+ * Functional responsible for Initialize the UART device by:
+ * 1. Setup the Frame format like number of data bits, parity bit type and number of stop bits.
+ * 2. Enable the UART.
+ * 3. Setup the UART baud rate.
+ */
+void UART_init(const UART_INIT *selectModes);
+
+/*
+ * Description :
+ * Functional responsible for send byte to another UART device.
+ */
+void UART_sendByte(const uint8 data);
+
+/*
+ * Description :
+ * Functional responsible for receive byte from another UART device.
+ */
+uint8 UART_recieveByte(void);
+
+/*
+ * Description :
+ * Send the required string through UART to the other UART device.
+ */
+void UART_sendString(const uint8 *Str);
+
+/*
+ * Description :
+ * Receive the required string until the '#' symbol through UART from the other UART device.
+ */
+void UART_receiveString(uint8 *Str); // Receive until #
+
+#endif /* UART_H_ */

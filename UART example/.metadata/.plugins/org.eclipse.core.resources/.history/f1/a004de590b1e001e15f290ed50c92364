@@ -1,0 +1,79 @@
+#include "uart.h"
+#include "MY_GPIO.h"
+#include "std_types.h"
+#include "DC_motor.h"
+#include "LCD.h"
+#include "PWM.h"
+#include "util/delay.h"
+int main()
+{
+	uint8 num;
+	UART_INIT INIT_OBJ={async,Disabled,_1_Stop_Bit,_8_Bit_Mode,Double_speed,9600};
+	LCD_init();
+	DcMotor_Init();
+	UART_init(&INIT_OBJ);
+	LCD_displayStringRowColumn(0,4,"Motor is    ");
+	LCD_displayStringRowColumn(1,4,"Speed is    ");
+	while(1)
+	{
+		LCD_displayStringRowColumn(0,4,"Motor is    ");
+		LCD_displayStringRowColumn(1,4,"Speed is    ");
+		num=UART_recieveByte();
+		if(num==13)
+		{
+
+			DcMotor_Rotate(OFF,0);
+			LCD_displayStringRowColumn(0,13,"OFF ");
+			LCD_displayStringRowColumn(1,13,"0 ");
+		}
+		else if(num==1)
+		{
+			DcMotor_Rotate(CW,64);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"25% ");
+
+		}
+
+		else if(num==2)
+		{
+			DcMotor_Rotate(CW,192);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"75% ");
+		}
+		else if(num==3)
+		{
+			DcMotor_Rotate(CW,255);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"100% ");
+		}
+		else if(num==4)
+		{
+			DcMotor_Rotate(A_CW,64);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"25% ");
+
+		}
+
+		else if(num==5)
+		{
+			DcMotor_Rotate(A_CW,192);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"75% ");
+		}
+		else if(num==6)
+		{
+			DcMotor_Rotate(A_CW,255);
+			LCD_displayStringRowColumn(0,13,"ON ");
+			LCD_displayStringRowColumn(1,13,"100% ");
+		}
+		else
+		{
+			LCD_clearScreen();
+			LCD_displayStringRowColumn(0,13,"Error!! ");
+			_delay_ms(1000);
+			num=0;
+		}
+
+	}
+
+}
